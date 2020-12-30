@@ -1,0 +1,2 @@
+# nyt-cooking
+firefox extention
