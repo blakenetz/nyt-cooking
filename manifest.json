@@ -1,0 +1,15 @@
+{
+	"manifest_version": 1,
+	"name": "NytCooking",
+	"version": "1.0",
+	"description": "Deletes paywall shhhh",
+	"icons": {
+		"48": "icons/icon-48.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://cooking.nytimes.com/*"],
+			"js": ["index.js"]
+		}
+	]
+}

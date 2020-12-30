@@ -1,2 +1,3 @@
 # nyt-cooking
-firefox extention
+
+Firefox extension for [NYT cooking](https://cooking.nytimes.com/)
