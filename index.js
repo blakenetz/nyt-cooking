@@ -1,13 +1,28 @@
-window.onload = function () {
-	// remove noScroll css class
-	[...document.querySelectorAll('[class*="noScroll"]')].forEach((node) => {
-		const [className] = [...node.classList].filter(
-			(cl) => cl.indexOf("noScroll") > -1
-		);
-		node.classList.remove(className);
-	});
-	// remove all modals
+const noScrollNodeList = ['html', 'body'].map(sel => document.querySelector(sel))
+const config = {
+	attibutes: true,
+	attributeFilter: ['class']
+}
+
+function removeModals() {
 	[...document.querySelectorAll('[role="dialog"]')].forEach((el) =>
 		el.remove()
 	);
+}
+function removeNoScrollClass(node) {
+	[...node.classList].filter(
+		(cl) => cl.indexOf("noScroll") > -1
+	).forEach(cl => node.classList.remove(cl))
+
+}
+
+window.onload = function () {
+	removeModals();
+	[...document.querySelectorAll('[class*="noScroll"]')].forEach((node) => removeNoScrollClass(node));
 };
+
+const observer = new MutationObserver((mutationsList) => {
+	mutationsList.forEach(mutation => removeNoScrollClass(mutation.target))
+});
+
+noScrollNodeList.forEach(el => observer.observe(el, config))
