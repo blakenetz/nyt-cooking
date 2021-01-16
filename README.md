@@ -10,6 +10,7 @@ Firefox extension for [NYT cooking](https://cooking.nytimes.com/)
 
 ### Self-distributed
 
-- Create Mozilla profile/add-on key (https://addons.mozilla.org/developers/addon/api/key/)
+- Create Mozilla profile/add-on [key](https://addons.mozilla.org/developers/addon/api/key/)
 - Update .env file
 - Run `sign` and `build` commands
+- Install(https://extensionworkshop.com/documentation/publish/distribute-sideloading/)
