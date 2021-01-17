@@ -4,9 +4,9 @@
 	"description": "Deletes paywall shhhh",
 	"main": "index.js",
 	"scripts": {
-		"lint": "web-ext lint",
-		"sign": "web-ext sign --api-key=$(grep AMO_JWT_ISSUER .env | cut -d '=' -f2) --api-secret=$(grep AMO_JWT_SECRET .env | cut -d '=' -f2)",
-		"build": "web-ext build"
+		"lint:android": "web-ext lint",
+		"sign:android": "web-ext sign --api-key=$(grep AMO_JWT_ISSUER .env | cut -d '=' -f2) --api-secret=$(grep AMO_JWT_SECRET .env | cut -d '=' -f2)",
+		"build:android": "web-ext build"
 	},
 	"repository": {
 		"type": "git",
