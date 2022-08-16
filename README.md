@@ -1,6 +1,6 @@
 # nyt-cooking
 
-Firefox extension for [NYT cooking](https://cooking.nytimes.com/)
+Hacky paywall avoidance extension for [NYT cooking](https://cooking.nytimes.com/)
 
 ## Firefox
 
@@ -19,3 +19,5 @@ Firefox extension for [NYT cooking](https://cooking.nytimes.com/)
 
 - Unpack extensions in [extensions settings](chrome://extensions/)
 - Alternatively, follow [these instructions](https://developer.chrome.com/docs/extensions/mv2/getstarted/#manifest)
+
+## Safari

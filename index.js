@@ -3,7 +3,7 @@
 		return document.querySelector(sel);
 	});
 	const config = {
-		attibutes: true,
+		attributes: true,
 		attributeFilter: ["class"],
 	};
 
