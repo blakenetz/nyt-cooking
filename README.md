@@ -5,6 +5,7 @@ Hacky paywall avoidance extension for [NYT cooking](https://cooking.nytimes.com/
 ## Firefox
 
 There's a couple options for developing in FF.
+In either option, you must first downgrade the `manifest_version` to `2` in `manifest.json`.
 
 ### Temporary installation
 
@@ -18,24 +19,35 @@ There's a couple options for developing in FF.
 - Run the sign and build commands:
 
 ```cli
-$ yarn sign:android && build:android
+$ yarn sign:android && yarn build:android
 ```
 
 - [Install in browser](https://extensionworkshop.com/documentation/publish/distribute-sideloading/)
 
 ## Chrome
 
-- Unpack extensions in [extensions settings](chrome://extensions/)
-- Alternatively, follow [these instructions](https://developer.chrome.com/docs/extensions/mv2/getstarted/#manifest)
+- Visit [extensions settings](chrome://extensions/)
+- Toggle on `Developer mode`
+- Click `Load unpacked` and select root directory
+
+Alternatively, follow [these instructions](https://developer.chrome.com/docs/extensions/mv2/getstarted/#manifest)
 
 ## Safari
 
 You can use a [safari-web-extension-converter](https://developer.apple.com/documentation/safariservices/safari_web_extensions/converting_a_web_extension_for_safari) to build the extension.
 
-I would recommend updating the bundle identifier to something of your fancy.
+I would recommend moving this into a sibling directory and updating the bundle identifier to something of your fancy.
 
 ```cli
-$ xcrun safari-web-extension-converter . --app-name nytCookingPaywallBreaker --bundle-identifier com.[YOUR NAME HERE].nytCookingPaywallBreaker
+$ mkdir ../nyt-cooking-safari
+$ cd nyt-cooking-safari
+$ xcrun safari-web-extension-converter ../nyt-cooking --bundle-identifier com.[YOUR NAME HERE].nytCookingPaywallSmasher
 ```
 
+- Open Xcode (if it didn't automatically open)
+- Select macOS scheme (`Product` > `Scheme` > `nytCookingPaywallBreaker (macOS)`)
+- Run build (`Product` > `Build`)
 
+- Open Safari
+- Toggle on `Allow Unsigned Extensions` in `Develop` menu
+- Toggle on `NYT Cooking Paywall Smasher` in `Preferences` > `Extensions`
