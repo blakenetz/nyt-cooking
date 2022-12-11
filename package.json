@@ -1,9 +1,10 @@
 {
 	"name": "nyt-cooking",
-	"version": "1.3.0",
+	"version": "1.3.1",
 	"description": "Deletes paywall shhhh",
 	"main": "index.js",
 	"scripts": {
+		"build": "tsc index.ts",
 		"lint:android": "web-ext lint",
 		"sign:android": "web-ext sign --api-key=$(grep AMO_JWT_ISSUER .env | cut -d '=' -f2) --api-secret=$(grep AMO_JWT_SECRET .env | cut -d '=' -f2)",
 		"build:android": "web-ext build"
@@ -19,6 +20,9 @@
 	},
 	"homepage": "https://github.com/blakenetz/nyt-cooking#readme",
 	"dependencies": {
-		"web-ext": "^5.5.0"
+		"web-ext": "^7.4.0"
+	},
+	"devDependencies": {
+		"typescript": "^4.9.4"
 	}
 }

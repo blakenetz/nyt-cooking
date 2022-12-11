@@ -2,6 +2,15 @@
 
 Hacky paywall avoidance extension for [NYT cooking](https://cooking.nytimes.com/)
 
+## Installation
+
+```bash
+$ yarn
+$ yarn build
+```
+
+Then follow instructions for individual browsers...
+
 ## Firefox
 
 There's a couple options for developing in FF.
