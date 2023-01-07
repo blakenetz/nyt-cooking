@@ -1,3 +1,7 @@
+> 🚨 This project is essentially depricated 🚨
+> 
+> Please use the [nyt-paywall](https://github.com/blakenetz/nyt-paywall) project instead
+
 # nyt-cooking
 
 Hacky paywall avoidance extension for [NYT cooking](https://cooking.nytimes.com/)
